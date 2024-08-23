@@ -168,8 +168,8 @@
     - name:                            "1.17 Generic Pacemaker - Ensure the STONTIH device is configured"
       ansible.builtin.shell: >
                                        pcs stonith create rsc_st_azure fence_azure_arm
-                                         login="{{ fencing_spn_client_id }}"
-                                         passwd="{{ fencing_spn_client_pwd }}"
+                                         username="{{ fencing_spn_client_id }}"
+                                         password="{{ fencing_spn_client_pwd }}"
                                          resourceGroup="{{ resource_group_name }}"
                                          tenantId="{{ fencing_spn_tenant_id }}"
                                          subscriptionId="{{ fencing_spn_subscription_id }}"
